@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>KNS Contracts</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href=" img\kns logo final d.png" rel="icon">
+  <link href=" img\KNS logofinal c.png" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <script>
+    function toggleForm() {
+      var popup = document.getElementById("popup-form");
+      popup.style.display = (popup.style.display === "none") ? "block" : "none";
+    }
+
+    function closeForm() {
+      window.location.href = "index.html";
+    }
+  </script>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+main {
+  padding: 20px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+#plans-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.plan {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.plan h3 {
+  margin-top: 0;
+}
+
+.plan p {
+  margin-bottom: 0;
+}
+
+.plan-price {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.plan-features {
+  margin-bottom: 10px;
+}
+
+.plan-features ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.plan-features li {
+  padding: 5px 0;
+}
+
+.plan-button {
+  display: block;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.plan-button:hover {
+  background-color: #555;
+}
+
+.collapsible {
+        background-color: #ffffff;
+        color: rgb(11, 11, 11);
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+      }
+      .collapsible:hover {
+  background-color:#Facb45;
+}
+      .content {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        background-color: #f1f1f1;
+      }
+
+      .container1 {
+      display: flex;
+    }
+
+    .div1 {
+      width: 31.5%;
+      margin-left: 2.5rem;
+      margin-right:1%;
+    }
+
+    .div2 {
+      width: 31.5%;
+      margin-right:1%;
+    }
+
+    .div3 {
+      width: 31.5%;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div class="click-closed"></div>
+  <!--/ Form Search Star /-->
+  <div class="box-collapse">
+    <div class="title-box-d">
+      <h3 class="title-d">Search</h3>
+    </div>
+    <span class="close-box-collapse right-boxed ion-ios-close"></span>
+    <div class="box-collapse-wrap form">
+      <form class="form-a">
+        <div class="row">
+          <div class="col-md-12 mb-2">
+            <div class="form-group">
+              <label for="Type">Keyword</label>
+              <input type="text" class="form-control form-control-lg form-control-a" placeholder="Keyword">
+            </div>
+          </div>
+          <!-- <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="Type">Type</label>
+              <select class="form-control form-control-lg form-control-a" id="Type">
+                <option>All Type</option>
+                <option>For Rent</option>
+                <option>For Sale</option>
+                <option>Open House</option>
+              </select>
+            </div>
+          </div> -->
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="city">City</label>
+              <select class="form-control form-control-lg form-control-a" id="city">
+                <option>Bengaluru</option>
+                <option>Mysuru</option>
+                <option>Hyderabad</option>
+                <option>Chennai</option>
+                <option>Dheli</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="bedrooms">Designs</label>
+              <select class="form-control form-control-lg form-control-a" id="bedrooms">
+                <option>Any</option>
+                <option>Interior</option>
+                <option>Exterior</option>
+              </select>
+            </div>
+          </div>
+          <!-- <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="garages">Garages</label>
+              <select class="form-control form-control-lg form-control-a" id="garages">
+                <option>Any</option>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+              </select>
+            </div>
+          </div> -->
+          <!-- <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="bathrooms">Bathrooms</label>
+              <select class="form-control form-control-lg form-control-a" id="bathrooms">
+                <option>Any</option>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+              </select>
+            </div>
+          </div> -->
+          <!-- <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="price">Min Price</label>
+              <select class="form-control form-control-lg form-control-a" id="price">
+                <option>Unlimite</option>
+                <option>$50,000</option>
+                <option>$100,000</option>
+                <option>$150,000</option>
+                <option>$200,000</option>
+              </select>
+            </div>
+          </div> -->
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-b" style="border-radius: 10px;"><b>Search</b></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!--/ Form Search End /-->
+
+  <!--/ Nav Star /-->
+  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+    <div class="container">
+      <!-- <img class="kns_logo" src="C:\Users\Bhanu\Desktop\KNS logofinal c.jpg"> -->
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a class="navbar-brand text-brand" style="padding-left: 5rem;" href="index.html"><span class="color-b"><img class="kns_logo" src=" img\KNS logofinal c.jpg"></span></a>
+      <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
+        data-target="#navbarTogglerDemo01" aria-expanded="false">
+        <span class="fa fa-search" aria-hidden="true"></span>
+      </button>
+      <div class="navbar-collapse collapse justify-content-center" id="navbarDefault" style="padding-left: 8rem;">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#" onclick="toggleForm()">Site Visit</a>
+
+  <div id="popup-form" class="popup-form">
+    <span class="close-button" onclick="closeForm()">&times;</span>
+    <h2 style="text-align: center; color: #Facb45; font-family: monospace; padding-bottom: 4px;">Book Us For Site Visit</h2>
+    <!-- Add your form fields and submit button here -->
+    <form action="https://formsubmit.co/bhanushekhar9939@gmail@gmail.com" method="POST">
+      <label for="name" style=" color: #fcfcfa;"></label>
+      <input style="width: 100%; " type="text" id="name" name="name" placeholder="Name">
+      <br>
+      <label for="email" style=" color: #fcfcfa;"></label>
+      <input style="width: 100%; " type="email" id="email" name="email" placeholder="Email:">
+      <br>
+      <label for="phone" style=" color: #fcfcfa;"></label>
+      <input style="width: 100%; " type="phone" id="phone" name="phone" placeholder="Phone No:">
+      <br>
+      <label for="phone" style=" color: #fcfcfa;"></label>
+      <input style="width: 100%; " type="text" id="loca" name="loca" placeholder="Location">
+      <br><br>
+      <div class="pop-send"><input type="submit" value="Send Now"></inputtype></div>
+    </form>
+  </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="our-projects.html">Our Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="plans.html">Plans & Designs</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              More
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="material-estimator.html">Material Estimators</a>
+              <a class="dropdown-item" href="reviews.html">Reviews</a>
+              <a class="dropdown-item" href="agents-grid.html">Home Construction Guide & Cost</a>
+              <a class="dropdown-item" href="gallery.html">Blogs & Gallery</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"
+        data-target="#navbarTogglerDemo01" aria-expanded="false">
+        <span class="fa fa-search" aria-hidden="true"></span>
+      </button>
+    </div>
+  </nav>
+  <!--/ Nav End /-->
+
+  <!--/ Intro Single star /-->
+  <section style="background-image: url(img/plans-1.png); width:100%; height:500px; border-radius: 15px;"class="intro-single">
+    <div class="container">
+      <div class="row">
+        <div style="background-color: #Facb45; border-radius: 15px; margin-top: 10rem;"class="col-md-12 col-lg-8">
+          <div class="title-single-box">
+            <h1 class="title-single" style="background-color: #Facb45;">Our Amazing Plans</h1>
+            <span class="color-text-a">Finest construction designs and plans</span>
+          </div>
+        </div>
+        <!-- <div class="col-md-12 col-lg-4">
+          <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="index.html">Home</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                News Designs
+              </li>
+            </ol>
+          </nav> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Intro Single End /-->
+
+  <!--/ News Grid Star /-->
+  <h3 style="text-align: center; font-family: monospace; letter-spacing: 1px; padding-top: 2rem;">
+    <img class="pack-logo" src=" img\pack-logo.png">
+    PACKAGES</h3>
+    <div class="container1">
+      <div class="div1">
+        <div class="basic-pack">
+          <div class="pack-type">
+            BASIC PACKAGE
+          </div>
+          <div style="border-style: ridge; border-radius: 4px;box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.3);">
+            <button class="collapsible">Design & Drawings</button>
+              <div class="content">
+                <p>3D Elevation<br>
+                Structural Design<br>
+                Electrical Drawings</p>
+              </div>
+              <div class="space-border"></div>
+    <button class="collapsible">Structure</button>
+    <div class="content">
+      <p>Aggregates - 20mm & 40mm<br>
+        RCC Design Mix - As per the structural designer recommendation<br>
+        Ceiling Height - 10 feet (Finished Flooring to Finished Ceiling level)<br>
+        Steel - Sunvik, Meenakshi, Kamdhenu or equivalent<br>
+        Blocks - Standard Solid Concrete blocks. 6 inch 4 inch<br>
+        Cement - Dalmia, Coromandel or Zuari or equivalent (Portland Pozzolona Cement)</p>
+    </div>
+    <div class="space-border"></div>
+    <button class="collapsible">Kitchen</button>
+    <div class="content">
+      <p>Ceramic Wall Tiles, 2 feet above kitchen slab - Upto Rs.40 per Sqft<br>
+        Main Sink Faucet - Upto Rs.1500<br>
+        Any Other Faucet & Accessories - ISI Marked<br>
+        Kitchen Sink - Stainless Steel Single Sink worth Rs.4000</p>
+    </div>
+    <div class="space-border"></div>
+    <button class="collapsible">Bathrooms</button>
+    <div class="content">
+      <p>Bathroom doors - Waterproof flush doors<br>
+        Bathroom Ceramic Wall Tiles with 7 feet height - Upto Rs.40 per Sqft<br>
+        Sanitary ware & CP Fittings - Upto Rs.35000 per 1000 sqft of construction.<br>
+        CPVC Pipe - Astral or equivalent (common pipeline will be used for all the houses)</p>
+    </div>
+    <div class="space-border"></div>
+    <button class="collapsible">Flooring</button>
+    <div class="content">
+      <p>Living and Dining Flooring - Tiles of value upto Rs.50 per sqft<br>
+        Rooms and Kitchen Flooring - Tiles upto Rs.40 per sqft<br>
+        Balcony and Open Areas Flooring - Anti-skid tiles of value upto Rs.35 per sqft<br>
+        Staircase upto ₹ 50 per sqft<br>
+        Parking Tiles - Anti-skid tiles of value upto ₹40 per sqft</p>
+    </div>
+    <div class="space-border"></div>
+    <button class="collapsible">Painting</button>
+    <div class="content">
+      <p>Interior Painting - JK Putty + Tractor Emulsion or equivalent<br>
+        Exterior Painting - Asian Primer + Ace Exterior Emulsion Paint or equivalent</p>
+    </div>
+    <div class="space-border"></div>      
+    <button class="collapsible">Electrical</button>
+    <div class="content">
+      <p>Wires – Fireproof wires by Finolex<br>
+        Wires - Fireproof wires by Finolex</p>
+    </div>
+          </div>
+        </div>
+      </div>
+      <div class="div2">
+        <div class="basic-pack">
+          <div class="pack-type">
+            SILVER PACKAGE
+          </div>
+          <div style="border-style: ridge; border-radius: 4px;box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.3);">
+            <button class="collapsible">Design & Drawings</button>
+              <div class="content">
+                <p>3D Elevation<br>
+                Structural Design<br>
+                Electrical Drawings</p>
+              </div>
+              <div class="space-border"></div>
+    <button class="collapsible">Structure</button>
+    <div class="content">
+      <p>Aggregates - 20mm & 40mm<br>
+        RCC Design Mix - As per the structural designer recommendation<br>
+        Ceiling Height - 10 feet (Finished Flooring to Finished Ceiling level)<br>
+        Steel - Sunvik, Meenakshi, Kamdhenu or equivalent<br>
+        Blocks - Standard Solid Concrete blocks. 6 inch 4 inch<br>
+        Cement - Dalmia, Coromandel or Zuari or equivalent (Portland Pozzolona Cement)</p>
+    </div>
+    <div class="space-border"></div>
+    <button class="collapsible">Kitchen</button>
+    <div class="content">
+      <p>Ceramic Wall Tiles, 2 feet above kitchen slab - Upto Rs.40 per Sqft<br>
+        Main Sink Faucet - Upto Rs.1500<br>
+        Any Other Faucet & Accessories - ISI Marked<br>
+        Kitchen Sink - Stainless Steel Single Sink worth Rs.4000</p>
+    </div>
+    <div class="space-border"></div>
+    <button class="collapsible">Bathrooms</button>
+    <div class="content">
+      <p>Bathroom doors - Waterproof flush doors<br>
+        Bathroom Ceramic Wall Tiles with 7 feet height - Upto Rs.40 per Sqft<br>
+        Sanitary ware & CP Fittings - Upto Rs.35000 per 1000 sqft of construction.<br>
+        CPVC Pipe - Astral or equivalent (common pipeline will be used for all the houses)</p>
+    </div>
+    <div class="space-border"></div>
+    <button class="collapsible">Flooring</button>
+    <div class="content">
+      <p>Living and Dining Flooring - Tiles of value upto Rs.50 per sqft<br>
+        Rooms and Kitchen Flooring - Tiles upto Rs.40 per sqft<br>
+        Balcony and Open Areas Flooring - Anti-skid tiles of value upto Rs.35 per sqft<br>
+        Staircase upto ₹ 50 per sqft<br>
+        Parking Tiles - Anti-skid tiles of value upto ₹40 per sqft</p>
+    </div>
+    <div class="space-border"></div>
+    <button class="collapsible">Painting</button>
+    <div class="content">
+      <p>Interior Painting - JK Putty + Tractor Emulsion or equivalent<br>
+        Exterior Painting - Asian Primer + Ace Exterior Emulsion Paint or equivalent</p>
+    </div>
+    <div class="space-border"></div>      
+    <button class="collapsible">Electrical</button>
+    <div class="content">
+      <p>Wires – Fireproof wires by Finolex<br>
+        Wires - Fireproof wires by Finolex</p>
+    </div>
+          </div>
+        </div>
+      </div>
+      <div class="div3">
+        <div class="basic-pack">
+          <div class="pack-type">
+            GOLD PACKAGE
+          </div>
+          <div style="border-style: ridge; border-radius: 4px;box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.3);">
+            <button class="collapsible">Design & Drawings</button>
+              <div class="content">
+                <p>3D Elevation<br>
+                Structural Design<br>
+                Electrical Drawings</p>
+              </div>
+              <div class="space-border"></div>
+    <button class="collapsible">Structure</button>
+    <div class="content">
+      <p>Aggregates - 20mm & 40mm<br>
+        RCC Design Mix - As per the structural designer recommendation<br>
+        Ceiling Height - 10 feet (Finished Flooring to Finished Ceiling level)<br>
+        Steel - Sunvik, Meenakshi, Kamdhenu or equivalent<br>
+        Blocks - Standard Solid Concrete blocks. 6 inch 4 inch<br>
+        Cement - Dalmia, Coromandel or Zuari or equivalent (Portland Pozzolona Cement)</p>
+    </div>
+    <div class="space-border"></div>
+    <button class="collapsible">Kitchen</button>
+    <div class="content">
+      <p>Ceramic Wall Tiles, 2 feet above kitchen slab - Upto Rs.40 per Sqft<br>
+        Main Sink Faucet - Upto Rs.1500<br>
+        Any Other Faucet & Accessories - ISI Marked<br>
+        Kitchen Sink - Stainless Steel Single Sink worth Rs.4000</p>
+    </div>
+    <div class="space-border"></div>
+    <button class="collapsible">Bathrooms</button>
+    <div class="content">
+      <p>Bathroom doors - Waterproof flush doors<br>
+        Bathroom Ceramic Wall Tiles with 7 feet height - Upto Rs.40 per Sqft<br>
+        Sanitary ware & CP Fittings - Upto Rs.35000 per 1000 sqft of construction.<br>
+        CPVC Pipe - Astral or equivalent (common pipeline will be used for all the houses)</p>
+    </div>
+    <div class="space-border"></div>
+    <button class="collapsible">Flooring</button>
+    <div class="content">
+      <p>Living and Dining Flooring - Tiles of value upto Rs.50 per sqft<br>
+        Rooms and Kitchen Flooring - Tiles upto Rs.40 per sqft<br>
+        Balcony and Open Areas Flooring - Anti-skid tiles of value upto Rs.35 per sqft<br>
+        Staircase upto ₹ 50 per sqft<br>
+        Parking Tiles - Anti-skid tiles of value upto ₹40 per sqft</p>
+    </div>
+    <div class="space-border"></div>
+    <button class="collapsible">Painting</button>
+    <div class="content">
+      <p>Interior Painting - JK Putty + Tractor Emulsion or equivalent<br>
+        Exterior Painting - Asian Primer + Ace Exterior Emulsion Paint or equivalent</p>
+    </div>
+    <div class="space-border"></div>      
+    <button class="collapsible">Electrical</button>
+    <div class="content">
+      <p>Wires – Fireproof wires by Finolex<br>
+        Wires - Fireproof wires by Finolex</p>
+    </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+        </script>
+    </div>
+  
+  
+  
+    
+  <!--/ News Grid End /-->
+
+  <!--/ footer Star /-->
+  <section class="section-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-4">
+          <div class="widget-a">
+            <div class="w-header-a">
+              <h3 class="w-title-a text-brand">KNS Contracts & wBuilders</h3>
+            </div>
+            <div class="w-body-a">
+              <p class="w-text-a color-text-a">
+                KNS Contracts & Builders is a construction business Bengaluru,Karnataka. 
+                We specialize in residential, commercial, and industrial construction projects.
+              </p>
+            </div>
+            <div class="w-footer-a">
+              <ul class="list-unstyled">
+                <li class="color-a">
+                  <span class="color-text-a">Phone:</span>080 4099 0889</li>
+                <li class="color-a">
+                  <span class="color-text-a">Email:</span>contactus@rapsoltechnologies.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 section-md-t3">
+          <div class="widget-a">
+            <div class="w-header-a">
+              <h3 class="w-title-a text-brand">The Company</h3>
+            </div>
+            <div class="w-body-a">
+              <div class="w-body-a">
+                <ul class="list-unstyled">
+                  <li class="item-list-a">
+                    <i class="fa fa-angle-right"></i> <a href="#">Site Map</a>
+                  </li>
+                  <li class="item-list-a">
+                    <i class="fa fa-angle-right"></i> <a href="#">Legal</a>
+                  </li>
+                  <li class="item-list-a">
+                    <i class="fa fa-angle-right"></i> <a href="#">Agent Admin</a>
+                  </li>
+                  <li class="item-list-a">
+                    <i class="fa fa-angle-right"></i> <a href="#">Careers</a>
+                  </li>
+                  <li class="item-list-a">
+                    <i class="fa fa-angle-right"></i> <a href="#">Affiliate</a>
+                  </li>
+                  <li class="item-list-a">
+                    <i class="fa fa-angle-right"></i> <a href="#">Privacy Policy</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 section-md-t3">
+          <div class="widget-a">
+            <div class="w-header-a">
+              <h3 class="w-title-a text-brand">International sites</h3>
+            </div>
+            <div class="w-body-a">
+              <ul class="list-unstyled">
+                <li class="item-list-a">
+                  <i class="fa fa-angle-right"></i> <a href="#">Venezuela</a>
+                </li>
+                <li class="item-list-a">
+                  <i class="fa fa-angle-right"></i> <a href="#">China</a>
+                </li>
+                <li class="item-list-a">
+                  <i class="fa fa-angle-right"></i> <a href="#">Hong Kong</a>
+                </li>
+                <li class="item-list-a">
+                  <i class="fa fa-angle-right"></i> <a href="#">Argentina</a>
+                </li>
+                <li class="item-list-a">
+                  <i class="fa fa-angle-right"></i> <a href="#">Singapore</a>
+                </li>
+                <li class="item-list-a">
+                  <i class="fa fa-angle-right"></i> <a href="#">Philippines</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <nav class="nav-footer">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="#">Home</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">About</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Property</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Blog</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="socials-a">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-dribbble" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="copyright-footer">
+            <p class="copyright color-text-a">
+              &copy; Copyright
+              <span class="color-a">KNS Contracts & Builders</span> All Rights Reserved.
+            </p>
+          </div>
+          <div class="credits">
+            
+            Designed by <a href="https://bootstrapmade.com/">Rapsol Technologies Pvt Ltd</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--/ Footer End /-->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <div id="preloader"></div>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/popper/popper.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/scrollreveal/scrollreveal.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
